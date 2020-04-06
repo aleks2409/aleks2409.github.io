@@ -902,7 +902,7 @@ to {
     font-size: 18px;
 }
 /** multicolored skill bars **/
-.SkillBar #Skill-HTML {
+.SkillBar {
   background-color: #676767;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#858985), to(#676767));
   background-image: -webkit-linear-gradient(top, #858985, #676767);
