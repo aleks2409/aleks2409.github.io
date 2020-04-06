@@ -523,7 +523,14 @@ footer p {
     width: 95%;
     height: auto;
     margin: 40px auto;
+      background-color: #fff;
+    //border: 1px solid #cdcdcd;
     padding: 10px;
+    border-radius:20px;
+    -o-border-radius:20px;
+    -webkit-border-radius:20px;
+    -ms-border-radius:20px;
+    -moz-border-radius:20px; 
 }
 #SkillBox img {
     width: 20%;
@@ -546,7 +553,13 @@ footer p {
     -o-animation: Animate-HTML 4s;
     height: 50px;
     position: absolute;
-    background-color: #ea8564;
+   background-color: #676767;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#858985), to(#676767));
+  background-image: -webkit-linear-gradient(top, #858985, #676767);
+  background-image: -moz-linear-gradient(top, #858985, #676767);
+  background-image: -ms-linear-gradient(top, #858985, #676767);
+  background-image: -o-linear-gradient(top, #858985, #676767);
+  background-image: linear-gradient(top, #858985, #676767);
 }
 @keyframes Animate-HTML {
     from {
