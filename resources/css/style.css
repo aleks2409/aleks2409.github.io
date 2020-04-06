@@ -537,6 +537,17 @@ footer p {
   color: #ccc !important;
   font-style: italic;  
 }
+
+#SkillBox .SkillBar {
+  
+  background-color: #50d3d1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#50d3d1), to(#4cc97c));
+  background-image: -webkit-linear-gradient(left, ##50d3d1, #4cc97c);
+  background-image: -moz-linear-gradient(left, #50d3d1, #4cc97c);
+  background-image: -ms-linear-gradient(left, #50d3d1, #4cc97c);
+  background-image: -o-linear-gradient(left, #50d3d1, #4cc97c);
+  background-image: linear-gradient(left, #50d3d1, #4cc97c);
+}
 #SkillBox {
     font-size: 20px;
     width: 95%;
@@ -556,7 +567,7 @@ footer p {
     width: 90%;
     height: 50px;
     position: relative;
-    background: rgba(17, 17, 17, .3);
+    
     margin: 20px auto;
 }
 #Skill-HTML {
