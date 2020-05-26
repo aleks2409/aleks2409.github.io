@@ -100,7 +100,7 @@ figure.effect-lexi img {
 	max-width: none;
 	width: -webkit-calc(100% + 10px);
 	width: calc(100% + 10px);
-	opacity: 0.9;
+	opacity: 0.5;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(10px,10px,0);
@@ -133,7 +133,7 @@ figure.effect-lexi figcaption::before {
 }
 
 figure.effect-lexi:hover img {
-	opacity: 0.6;
+	opacity: 0.5;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
