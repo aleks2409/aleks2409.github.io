@@ -92,7 +92,7 @@
 
 figure.effect-lexi {
 	background: -webkit-linear-gradient(-45deg, #000 0%,#fff 100%);
-	background: linear-gradient(-45deg, #000 0%,#fff 100%);
+	background: linear-gradient(-45deg, #000 10%,#000 100%);
 }
 
 figure.effect-lexi img {
