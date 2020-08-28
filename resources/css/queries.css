@@ -47,6 +47,7 @@
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
     body { font-size: 16px; }
+    .row.forma {width:80%!important;}
     section { padding: 30px 0; }
     
     .row,
@@ -55,6 +56,7 @@
         width: 100%;
         margin: 0 0 4% 0;
     }
+    
     
     
     .main-nav { display: none; }
