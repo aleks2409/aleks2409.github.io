@@ -1,3 +1,13 @@
+
+@media only screen and (max-width: 1350px) {
+    .header-content {padding: 0!important;}
+    h1 {font-size: 38px!important;}
+    .header-overlay {top: 40%!important;padding-left: 20px!important;}
+
+    
+}
+
+
 /* Big tablet to 1200px (widths smaller taht the 1140px row) */
 @media only screen and (max-width: 1200px) {
     .hero-text-box {
@@ -6,6 +16,7 @@
     }
     
     .row { padding: 0 2%; }
+    .header-content {}
 }
 
 
@@ -56,6 +67,7 @@
         width: 100%;
         margin: 0 0 4% 0;
     }
+
     
     
     
