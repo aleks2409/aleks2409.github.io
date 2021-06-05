@@ -16,6 +16,10 @@
 	    <link rel="stylesheet" type="text/css" href="demo.css" />
         
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
         
         
 
@@ -26,6 +30,7 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+ 
 
         <title>Aleksandra</title>
      <style>
@@ -518,8 +523,125 @@
             transform: translate3d(0, 0px, 0px);
   }
 }
+	
+         
+         .video-header{height: 100vh;
+         display: flex;
+	     align-items: center;
+	     color: #fff;
+	
+}
+
+  #myVideo {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	opacity: 0.3;
+    }
+         
+         nav {
+             z-index: 1;
+             position: relative;
+         }
+         .wrap{
+	max-width: 960px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin:auto;
+	text-align: center;
+	
+}
 	     
-	     
+         .header-overlay{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.80;
+	
+}
+
+.header-content{
+	z-index: 2;
+	margin-top:20%;
+	padding: 0 15rem;
+	
+}
+
+.header-content h1{
+	font-size: 50px;
+	margin-bottom: 0;
+	
+}
+.header-content p{
+	font-size: 1.5rem;
+	display: block;
+	padding-bottom: 2rem;
+	margin-top: 10px;
+}
+         
+         h4::before {
+    content: " ";
+    width: 70px;
+    height: 1px;
+    background-color: #7f7e7e;
+    display: block;
+    position: absolute;
+    left: 220px;
+}
+         h4 {
+font-family: Montserrat;
+text-transform: uppercase;
+letter-spacing: 0;
+font-size: 14px;
+line-height: 1px;
+font-weight: 400;
+         }
+         
+         #navbar {
+  position: fixed;
+  top: -20px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 1;
+}
+    
+         
+    
+#svg-wrapper {
+
+  padding-top: 28px;
+  margin: 0 auto;
+  float: left;
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #fc3768;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #525252;
+  top: -48px;
+  position: relative;
+  text-align: center;
+}
+#svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
 	    </style>
 	     <script>
         document.addEventListener('click', click);
@@ -542,15 +664,81 @@ function click(e) {
   event.stopPropagation();
 }
         </script>
+            <script>
+
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #1f00a7}";
+    document.body.appendChild(css);
+};
+
+
+        </script>
         
     </head>
     <body>
         
         <header>
-            <nav>
+            <div id="navbar">
                 <div class="row">
-                    <img src="resources/img/a.png" alt="logo" class="logo">
-                    <img src="resources/img/a.png" alt="logo" class="logo-black">
+                  <div id="svg-wrapper">
+  <svg height="60" width="280" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="280" />
+    <div class="text">ALX MI</div>
+  </svg>
+</div> 
+                  <!--    <a href="index.html" class="logo" id="logo"> <img src="resources/img/a.png" alt="logo" class="logo"></a>-->
                     <ul class="main-nav js--main-nav">
                         <li><a href="#portfolio">portfolio</a></li>
                         <li><a href="gallery.html">design</a></li>
@@ -560,15 +748,51 @@ function click(e) {
                     </ul>
                     <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
                 </div>
-            </nav>
-            <div class="hero-text-box">
-                <h1 class="animated bounceInDown" style="animation-duration: 2.5s;">Hello,</h1>
-             <h1 class="animated bounceInLeft" style="animation-duration: 2.5s;">I am Aleksandra</h1>
-          
-             <h1 class="animated bounceInRight" style="animation-duration: 2.5s;">Front End developer</h1>
             </div>
+            <video playsinline autoplay muted loop poster="" id="myVideo">
+				<source src="resources/img/web.mp4" type="video/mp4">
+                
+                
+			</video>
+            <div class="header-overlay">
+              <div class="header-content">
+                  <h4>
+                 
+                      <span style="color: #7f7e7e;">FRONT END DEVELOPMENT</span>
+                  </h4>
+                <h1 style="font-family: 'Montserrat', sans-serif;  color: #1f00a7;font-size: 68px;"><strong>Websites done right</strong> <br>
+                  <a href="" class="typewrite" style="color: #1f00a7; font-family: 'Montserrat', sans-serif;" data-period="2000" data-type='[ "web design...", "web development...", "SEO...", "e-mail development...", "responsive design..." ]'>
+                  <span class="wrap"></span>
+                  </a>
+                  </h1>
+                  <p>&lt;/&gt; with <span style="color: #fc3768;">&#x2764;</span> </p>
+             
+              </div>
+            </div>
+           
             
         </header>
+        
+                <section class="demo-content"></section>
+
+     <script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+      document.getElementById("navbar").style.backgroundColor = "white";
+      document.getElementById('navbar').style.zIndex = "1";
+      
+  } else {
+    document.getElementById("navbar").style.top = "0px";
+       
+  }
+}
+</script>
+           
+
             
            <section class="section-cities" id="portfolio">
             <div class="row">
