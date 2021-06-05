@@ -204,8 +204,6 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 header {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/bg3.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/bg3.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -252,7 +250,7 @@ header {
 .main-nav li a:link,
 .main-nav li a:visited {
     padding: 8px 0;
-    color: #fff;
+    color: #525252;
     text-decoration: none;
     text-transform: none;
     font-size: 90%;
@@ -271,7 +269,7 @@ header {
 
 .mobile-nav-icon i {
     font-size: 200%;
-    color: #fff;
+    color: #333;
 }
 
 
