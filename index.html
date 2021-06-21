@@ -21,7 +21,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
         
-        
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
         <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -34,7 +40,29 @@
 
         <title>Aleksandra</title>
      <style>
-        
+div.gallery {
+  margin: 5px;
+  float: left;
+  width: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+div.gallery:hover {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+   
+
 
 .btn-container {
   display: -webkit-box;
@@ -778,6 +806,8 @@ window.onload = function() {
 
         </script>
         
+   
+        
     </head>
     <body>
         
@@ -846,57 +876,46 @@ function scrollFunction() {
            
 
             
-           <section class="section-cities" id="portfolio">
-            <div class="row">
-                <h2>some of my latest work</h2>
-            </div>
+        <section class="section-cities" id="portfolio">
+              <div class="row" style="max-width: 1400px;">  <h2>some of my latest work</h2>
+           
                
-               <div class="red"> 
-  <div class="column" style="margin-left: auto;">
-    <img src="img/email1.gif" style="width:100%">
-        <img src="img/email2.gif" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="img/nikolic.png" style="width:100%">
-
-      <img src="img/grooming.png" style="width:100%">
-    <img src="img/restoran.png" style="width:100%">
-    <img src="img/happy.png" style="width:100%">
-  </div>  
-  <div class="column" style="margin-right: auto;">
-    <img src="img/email3.gif" style="width:100%">
-    <img src="img/prenociste.png" style="width:100%">
-    <img src="img/sala.png" style="width:100%">
-  </div>
-  
+       <div class="gallery cupcake">
+  <a target="_blank" href="img/cupcake.mp4">
+    <img src="img/screenshot.png" alt="Bakery" width="600" height="400">
+  </a>
+ 
 </div>
-          <!--  <div class="row js--wp-3">
-		    <div class="grid">
-					<figure class="effect-lexi">
-						<img src="img/nikolic.png" alt="img12"/>
-						<figcaption>
-							<h2>TRAVEL <span>WEBSITE</span></h2>
-							<p>View more</p>
-							<a href="http://nikolicprevoz.rs/">View more</a>
-						</figcaption>			
-					</figure>
-					<figure class="effect-lexi">
-						<img src="img/grooming.png" alt="img03"/>
-						<figcaption>
-							<h2>GROOMING <span>WEBSITE</span></h2>
-							<p>View more</p>
-							<a href="http://www.grooming019.rs/">View more</a>
-						</figcaption>			
-					</figure>
-			   
-				</div>
-                
-            </div> -->
-            
+
+<div class="gallery">
+  <a target="_blank" href="http://nikolicprevoz.rs/sala.html">
+    <img src="img/sala.png" alt="Sala" width="600" height="400">
+  </a>
+
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="http://nikolicprevoz.rs/prenociste.html">
+    <img src="img/prenociste.png" alt="Prenociste" width="600" height="400">
+  </a>
+
+</div>
+
+
+
+
+
+
+
+
+
+    
+ </div> 
+    
         </section>
-        
-        
-        
+               
+      
+             
         <section class="section-testimonials" id="about">
             <div class="row">
                 <h2>about</h2>
@@ -912,6 +931,10 @@ function scrollFunction() {
                 <cite><img src="resources/img/portfolio.jpg" alt="photo"></cite>
             </div>
         </section>
+        
+        
+        
+       
         
         
         <section class="section-plans js--section-plans" id="skills">
@@ -941,77 +964,15 @@ function scrollFunction() {
     MySQL
   </button>
 			
-			 <!--
-<div id="SkillBox">
-       
-      
-  <div class="SkillBar">
-    <div id="Skill-HTML"> 
-      <span class="Skill-Area ">HTML</span>
-      <span class="PercentText ">100%</span>
-    </div>
-  </div>
-  
-  <div class="SkillBar">
-    <div id="Skill-CSS">
-      <span class="Skill-Area ">CSS/CSS3</span>
-      <span class="PercentText ">90%</span>
-    </div>
-  </div>
-
-  <div class="SkillBar">
-    <div id="Skill-jQuery">
-      <span class="Skill-Area ">jQuery</span>
-      <span class="PercentText ">50%</span>
-    </div>
-  </div>
-  
-  <div class="SkillBar">
-    <div id="Skill-JS">
-      <span class="Skill-Area ">JavaScript</span>
-      <span class="PercentText ">80%</span>
-    </div>
-  </div>
-  
-  
-  
-    <div class="SkillBar">
-    <div id="Skill-C">
-      <span class="Skill-Area ">WordPress</span>
-      <span class="PercentText ">70%</span>
-    </div>
-  </div>
-  
-    <div class="SkillBar">
-    <div id="Skill-JAVA">
-      <span class="Skill-Area ">Photoshop </span>
-      <span class="PercentText ">65%</span>
-    </div>
-  </div>
-  
-    <div class="SkillBar">
-    <div id="Skill-PHP">
-      <span class="Skill-Area ">PHP </span>
-      <span class="PercentText ">40%</span>
-    </div>
-  </div>
-  
-    <div class="SkillBar">
-    <div id="Skill-SQL">
-      <span class="Skill-Area ">SQL </span>
-      <span class="PercentText ">60%</span>
-    </div>
-  </div>
-  
-    
-  
-</div> -->
+			
+</div> 
 </center>
   
                 </div>
             </div>
                      
         </section>
+            
         
         
        <section class="section-form" id="contact">
