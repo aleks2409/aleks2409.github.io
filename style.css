@@ -52,6 +52,8 @@ body {
 .row {
     max-width: 1140px;
     margin: 0 auto;
+    margin-right: auto!important;
+    margin-left: auto!important;
 }
 
 section {
@@ -258,9 +260,7 @@ header {
     transition: border-bottom 0.2s;
 }
 
-.row {
-    margin-right: auto!important;
-    margin-left: auto!important;
+
 /* Mobile navi */
 .mobile-nav-icon {
     float: right;
