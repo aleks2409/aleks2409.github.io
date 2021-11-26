@@ -253,12 +253,14 @@ header {
     color: #525252;
     text-decoration: none;
     text-transform: none;
-    font-size: 90%;
+    font-size: 100%;
     -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 
-
+.row {
+    margin-right: auto!important;
+    margin-left: auto!important;
 /* Mobile navi */
 .mobile-nav-icon {
     float: right;
@@ -338,6 +340,8 @@ blockquote {
     position: relative;
     margin-top: 40px;
     display: inline;
+    border: none!important;
+    font-size: 17px!important;
 }
 
 blockquote:before {
